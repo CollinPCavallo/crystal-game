@@ -115,7 +115,7 @@ function startGame() {
 startGame();
 $("#resetButton").on("click", function() {
 	resetGame2();
-	$("#instruction").show()
+	$("#instruction").show();
 })
 
 
