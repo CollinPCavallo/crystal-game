@@ -13,7 +13,7 @@ h1, .win-loss, #computer-number, #score, button{
 	border-radius: 12px;
 
 }
-h1 {
+h1{
 	background-color: purple;
 	width: 20%;
 	margin: 0 auto;
@@ -67,9 +67,22 @@ img{
 }
 img:hover{
 	transform: scale(1.1); 
+	transition-duration: 0.8s;
 
 }
 button{
 	background-color: purple;
+	font-size: 25px;
+	font-weight: bolder;
+	width: 20%;
+	padding: 15px;
+
+
 }
 button:focus {outline:0;}
+button:hover{
+	transform: scale(1.1);
+	background-color: white;
+    color: black;
+    transition-duration: 0.8s;
+}

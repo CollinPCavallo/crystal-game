@@ -24,7 +24,7 @@ $(document).ready(function() {
 		var computerNumber = Math.floor((Math.random() * 100) + 1);
 		userScore = 0
 
-		$("#score").text("Your score is: " + userScore);
+		$("#score").text("Your total score is: " + userScore);
 		$("#computer-number").text("Number to Guess: "+ computerNumber);
 		$("#wins").text("Wins: " + wins);
 		$("#losses").text("Losses: " + losses);
@@ -36,15 +36,17 @@ $(document).ready(function() {
 	
 	
 	function resetGame() {
-		var computerNumber = Math.floor((Math.random() * 100) + 1);
+		computerNumber = Math.floor((Math.random() * 100) + 1);
 		userScore = 0
 
-		$("#score").text("Your score is: " + 0);
+		$("#score").text("Your total score is: " + 0);
 		$("#computer-number").text("Number to Guess: "+ computerNumber);
 		$("#wins").text("Wins: " + 0);
 		$("#losses").text("Losses: " + 0);
 		$("#crystalImg").html(" ");
 		startGame();
+		console.log(computerNumber);
+		console.log(userScore);
 
 
 	}
@@ -79,12 +81,13 @@ function startGame() {
 
 		userScore += crystalValue;
 
-		$("#score").text("Your Score is: " + userScore);
+		$("#score").text("Your total score  is: " + userScore);
 	
 
 		if (userScore === computerNumber) {
 			resetGame();
 			wins++;
+			console.log("wins ran");
 
 
 			
@@ -93,6 +96,7 @@ function startGame() {
 		else if (userScore >= computerNumber) {
 			resetGame();
 			losses++;
+			console.log("losses ran");
 			
 
 
@@ -112,42 +116,3 @@ $("#resetButton").on("click", function() {
 
 
 });
-
-
-
-// $(document).ready(function() {
-// var wins = 0
-// var losses = 0
-// var userScore = 0
-// var computerNumber = Math.floor((Math.random() * 100) + 1);
-// $("#computer-number").text(computerNumber);
-// var crystalNumber = Math.floor((Math.random() * 10) + 1);
-
-
-// for (var i = 0; i < 4; i++) {
-// 	var imgCrystal = $("<img>");
-
-// 	imgCrystal.addClass("crystal-img");
-
-// 	imgCrystal.attr("src", "assets/images/Crystal.png")
-
-// 	imgCrystal.attr("data-crystalvalue", crystalNumber);
-
-// 	$("#crystalImg").append(imgCrystal);
-
-// 	$(".crystal-img").on("click", function() {
-
-// 		var crystalValue = ($(this).attr("data-crystalvalue"));
-// 		crystalValue = parseInt(crystalValue);
-
-// 		userScore += crystalValue;
-
-// 		$("#score").text("Score: " + userScore);
-// 	})
-
-// }
-
-
-
-
-// });
