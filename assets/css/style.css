@@ -1,0 +1,75 @@
+body{
+	
+	background: url(../images/background.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+h1, div, button{
+	text-align: center;
+	font-family: 'Kumar One', cursive;
+
+}
+h1, .win-loss, #computer-number, #score, button{
+	border: 1.5px black solid;
+	border-radius: 12px;
+
+}
+h1 {
+	background-color: purple;
+	width: 20%;
+	margin: 0 auto;
+	font-size: 30px;
+	font-weight: bolder;
+	padding: 15px;
+	padding-top: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.win-loss{
+	background-color: red;
+	width: 20%;
+	margin: 0 auto;
+	font-weight: bolder;
+	padding: 15px;
+	padding-top: 20px;
+	font-size: 25px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+/* #crystalImg{
+	position: relative;
+	top: 100px;
+} */
+
+img{
+	width: 200px;
+	height: 200px;
+	margin: 10px 0px 10px 0px;
+}
+#computer-number, #score{
+	background-color: blue;
+	width: 30%;
+	margin: 0 auto;
+	font-weight: bolder;
+	padding: 15px;
+	padding-top: 20px;
+	font-size: 25px;
+	display:inline-block;
+	text-align: center;
+
+}
+.scoreNumber{
+		margin: 0 auto;
+		width: 70%;
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+}
+img:hover{
+	transform: scale(1.1); 
+
+}
+button{
+	background-color: purple;
+}
+button:focus {outline:0;}
