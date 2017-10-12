@@ -19,19 +19,21 @@ $(document).ready(function() {
 	$("#wins").text("Wins: " + wins);
 	$("#losses").text("Losses: " + losses);
 
-		function resetGame2() {
+	
+	function resetGame2() {
 		var computerNumber = Math.floor((Math.random() * 100) + 1);
 		userScore = 0
 
-		$("#score").text("Your score is: " + user);
+		$("#score").text("Your score is: " + userScore);
 		$("#computer-number").text("Number to Guess: "+ computerNumber);
 		$("#wins").text("Wins: " + wins);
 		$("#losses").text("Losses: " + losses);
 		$("#crystalImg").html(" ");
 		startGame();
-
-
 	}
+
+
+	
 	
 	function resetGame() {
 		var computerNumber = Math.floor((Math.random() * 100) + 1);
@@ -78,13 +80,16 @@ function startGame() {
 		userScore += crystalValue;
 
 		$("#score").text("Your Score is: " + userScore);
-		
+	
+
 		if (userScore === computerNumber) {
+			resetGame();
 			wins++;
 
 
 			
 		}
+
 		else if (userScore >= computerNumber) {
 			resetGame();
 			losses++;
@@ -94,6 +99,7 @@ function startGame() {
 		}
 		$("#wins").text("Wins: " + wins);
 		$("#losses").text("Losses: " + losses);
+
 
 	});
 }
