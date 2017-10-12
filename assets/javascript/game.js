@@ -21,7 +21,7 @@ $(document).ready(function() {
 
 	
 	function resetGame2() {
-		var computerNumber = Math.floor((Math.random() * 100) + 1);
+		computerNumber = Math.floor((Math.random() * 100) + 1);
 		userScore = 0
 
 		$("#score").text("Your total score is: " + userScore);
@@ -30,6 +30,9 @@ $(document).ready(function() {
 		$("#losses").text("Losses: " + losses);
 		$("#crystalImg").html(" ");
 		startGame();
+		$(".imgCrystal").on("click", function(){
+			$("#instruction").show()
+		})
 	}
 
 
@@ -82,6 +85,7 @@ function startGame() {
 		userScore += crystalValue;
 
 		$("#score").text("Your total score  is: " + userScore);
+		$("#instructions").hide();
 	
 
 		if (userScore === computerNumber) {
@@ -110,7 +114,8 @@ function startGame() {
 
 startGame();
 $("#resetButton").on("click", function() {
-	resetGame();
+	resetGame2();
+	$("#instruction").show()
 })
 
 
